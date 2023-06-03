@@ -1,3 +1,3 @@
-import Button from '@mui/material/Button'
+import { Router } from '~/router/Router'
 
-export const App = () => <Button variant="contained">Hello World</Button>
+export const App = () => <Router />
