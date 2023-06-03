@@ -14,6 +14,10 @@ build:
 up:
 	$(dc) up
 
+up/storybook:
+	$(dc) up -d
+	$(MAKE) y/storybook
+
 
 y/install:
 	$(de) $(container_name) sh -c "yarn install --frozen-lockfile"
@@ -48,8 +52,14 @@ y/info:
 y/build:
 	$(de) $(container_name) sh -c "yarn build"
 
+y/build-storybook:
+	$(de) $(container_name) sh -c "yarn build-storybook"
+
 y/dev:
-	$(de) $(container_name) sh -c "yarn dev --host"
+	$(de) $(container_name) sh -c "yarn dev"
+
+y/storybook:
+	$(de) $(container_name) sh -c "yarn storybook"
 
 
 exec:
