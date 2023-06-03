@@ -18,5 +18,5 @@ export default defineConfig({
   build: {
     chunkSizeWarningLimit: 100000,
   },
-  base: process.env.GITHUB_PAGES ? 'ryota-k0827' : './',
+  base: process.env.GITHUB_PAGES ? 'mui-react-todo-app' : './',
 })
