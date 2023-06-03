@@ -1,0 +1,16 @@
+services:
+  react-docker-project:
+    build:
+      context: .
+    container_name: react-docker-project
+    hostname: react-docker-project
+    tty: true
+    volumes:
+      - ./:/app
+      - react-docker-project-node-modules:/app/node_modules
+    ports:
+      - 3000:3000
+    command: "yarn dev --host"
+
+volumes:
+  react-docker-project-node-modules:

@@ -1,0 +1,64 @@
+<makeコマンドのヘルプ>
+
+make init
+-> 初回のみ実行する
+
+
+<基本コマンド>
+make build
+-> サービスの構築・再構築
+
+make up
+-> コンテナを作成し、開始する
+
+
+<yarnコマンド>
+make y/install
+-> パッケージのインストール
+
+make y/add p=<パッケージ名>
+-> パッケージの追加
+
+make y/add-D p=<パッケージ名>
+-> パッケージを開発環境に追加（devDependencies）
+
+make y/remove p=<パッケージ名>
+-> パッケージを削除
+
+make y/cache/clean
+-> パッケージキャッシュを全て削除
+
+make y/outdated
+-> 古いパッケージ一覧の表示
+
+make y/upgrade p=<パッケージ名>
+-> パッケージを更新
+
+make y/info p=<パッケージ名>
+-> パッケージ情報の表示
+
+make y/build
+-> ビルド
+
+make y/dev
+-> 開発モードで起動
+
+
+<その他>
+make modules/cp
+-> コンテナ内のnode_modulesをローカルにコピー
+
+make rm/modules
+-> コンテナ内とローカル上のnode_modulesを削除
+
+make rm/build
+-> ビルドファイルを削除
+
+make env/cp
+-> .emv.sampleをコピーし、.env.development.localを作成
+
+make open/web
+-> ブラウザでhttp://localhost:3000を開く
+
+make help
+-> ヘルプの表示

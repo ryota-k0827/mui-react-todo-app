@@ -1,0 +1,21 @@
+name: 'Code Check'
+
+on: push
+
+jobs:
+  code-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Setup node
+        uses: actions/setup-node@v1
+        with:
+          node-version: 18.16.0
+      - name: Setup yarn
+        run: |
+          npm install -g npm@9.6.7
+          yarn install --frozen-lockfile
+      - name: Format By ESLint and Prettier and CSpell
+        run: yarn fix
+      - name: Build
+        run: yarn build
