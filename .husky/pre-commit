@@ -8,16 +8,10 @@ function de_c {
   STATUS=`docker ps -f "name=${CONTAINER_NAME}" --format '{{ .Names }}'`
   if [ "${STATUS}" = "${CONTAINER_NAME}" ]; then
     ${DC} exec -T ${CONTAINER_NAME} sh -x -c "$1"
-    set -x
-    docker container cp ${CONTAINER_NAME}:/app/node_modules .
-    set +x
   else
     ${DC} up -d
     ${DC} exec -T ${CONTAINER_NAME} sh -x -c "$1"
-    set -x
-    docker container cp ${CONTAINER_NAME}:/app/node_modules .
     ${DC} down
-    set +x
   fi
 }
 
