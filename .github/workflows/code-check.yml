@@ -11,6 +11,7 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: 18.16.0
+          cache: 'yarn'
       - name: Setup yarn
         run: |
           npm install -g npm@9.6.7

@@ -18,4 +18,5 @@ export default defineConfig({
   build: {
     chunkSizeWarningLimit: 100000,
   },
+  base: process.env.GITHUB_PAGES ? 'REPOSITORY_NAME' : './',
 })
