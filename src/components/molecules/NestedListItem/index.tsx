@@ -14,8 +14,13 @@ interface NestedListItemProps {
 export const NestedListItem = ({ primary, icon, count, handleClickAdd, children }: NestedListItemProps) => {
   const [open, setOpen] = useState(false)
 
-  const handleClick = () => {
+  const onClickCollapse = () => {
     setOpen(!open)
+  }
+
+  const onClickAdd = () => {
+    handleClickAdd()
+    setOpen(true)
   }
 
   return (
@@ -27,10 +32,10 @@ export const NestedListItem = ({ primary, icon, count, handleClickAdd, children 
           </Badge>
         </ListItemIcon>
         <ListItemText primary={primary} />
-        <IconButton onClick={handleClickAdd} aria-label="add">
+        <IconButton onClick={onClickAdd} aria-label="add">
           <AddIcon sx={{ color: 'green' }} />
         </IconButton>
-        <IconButton onClick={handleClick} aria-label="expand">
+        <IconButton onClick={onClickCollapse} aria-label="expand">
           {open ? <ExpandLess /> : <ExpandMore />}
         </IconButton>
       </ListItem>
