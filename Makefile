@@ -1,4 +1,4 @@
-container_name := react-docker-project
+container_name := mui-react-todo-app
 dc := docker compose
 de := docker exec -it
 
@@ -6,6 +6,7 @@ init: build up
 
 
 build:
+	mkdir -p node_modules
 	$(dc) build --no-cache
 	$(dc) up -d
 	$(MAKE) modules/cp
