@@ -16,8 +16,8 @@ export const PrimaryList = () => {
     { id: 2, title: '未定義のタスク2', status: 'No Status' },
     { id: 3, title: '未定義のタスク3', status: 'No Status' },
     { id: 4, title: 'API定義書を作成する', status: 'ToDo' },
-    { id: 5, title: 'API定義書をレビューする', status: 'In Progress' },
-    { id: 6, title: 'API定義書を承認する', status: 'Done' },
+    { id: 5, title: 'API定義書をレビューする', status: 'ToDo' },
+    { id: 6, title: 'API定義書を承認する', status: 'ToDo' },
   ] as unknown as { id: number; title: string; status: Status }[])
 
   const handleClickAdd = (status: Status) => {
