@@ -1,7 +1,7 @@
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
 
-CONTAINER_NAME="react-docker-project"
+CONTAINER_NAME="mui-react-todo-app"
 DC="docker compose"
 
 function de_c {
