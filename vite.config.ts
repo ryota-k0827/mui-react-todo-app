@@ -15,8 +15,11 @@ export default defineConfig({
   server: {
     port: 3000,
   },
+  preview: {
+    port: 3000,
+  },
   build: {
     chunkSizeWarningLimit: 100000,
   },
-  base: process.env.GITHUB_PAGES ? 'mui-react-todo-app' : './',
+  base: process.env.GITHUB_PAGES ? 'mui-react-todo-app' : '/',
 })
